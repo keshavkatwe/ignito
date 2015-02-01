@@ -1,5 +1,7 @@
 <h2>IgniTo is a fully responsive multipurpose template</h2>
 
+Live Demo: <a href="http://dynasofts.com/themes/Ignito/">Click Here<a>
+
 It would be used in many kind of corporate business. 
 It is stated with 14 different colours. Users can mount colours by themselves into their website. 
 IgniTo interface is simple, presenting no difficulty for users. 
