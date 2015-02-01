@@ -1,4 +1,6 @@
-IgniTo is a fully responsive multipurpose template. It would be used in many kind of corporate business. 
+<h2>IgniTo is a fully responsive multipurpose template</h2>
+
+It would be used in many kind of corporate business. 
 It is stated with 14 different colours. Users can mount colours by themselves into their website. 
 IgniTo interface is simple, presenting no difficulty for users. 
 It is inclined with 15 pages which helps the users to use it on the go. 
