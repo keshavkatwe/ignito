@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IgniTo - Documentation</title>
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/prettify.css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    
+    <style>
+        ol.linenums {
+        color: #1E347B;
+        margin: 0 0 0 -9px;
+        }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target="#myScrollspy">
+      <script type="text/javascript" src="assets/plugins/prettify.js"></script>
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">IgniTo Documentation Version 1.0</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a target="new" href="../Template/">Demo</a></li>
+              <li><a target="new" href="http://www.dynasofts.com">Website</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <div>
+          <div id="myNav" class="col-md-3" style="position: fixed">
+              <div>
+                  <div class="panel panel-default">
+                    <div class="panel-body" id="myScrollspy">
+                        <ul  class="nav nav-pills nav-stacked" role="tablist">
+                            <li role="presentation" class="active"><a href="#overview">Overview</a></li>
+                            <li role="presentation"><a href="#template_structure">Template structure</a></li>
+                            <li role="presentation"><a href="#fonts">Fonts</a></li>
+                            <li role="presentation"><a href="#theme">Theme & Layout Configuration</a></li>
+                            <li role="presentation"><a href="#top-menu">Top Menu</a></li>
+                            <li role="presentation"><a href="#new-page">New Page</a></li>
+                            <li role="presentation"><a href="#javascriptInitialization">Javascript Initialization</a></li>
+                            <li role="presentation"><a href="#javascriptPluginsResources">Javascript Plugins & Resources</a></li>
+                            <li role="presentation"><a href="#references">References</a></li>
+                            <li role="presentation"><a href="#end">End Of Documentation</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+              </div>
+          </div>
+          <div class="col-md-9 col-md-offset-3">
+              <div class="panel panel-default">
+                  <div class="panel-body">
+                      <h3>Thank You for Purchasing Ignito</h3>
+                      If you have any questions that are beyond the scope of this help file, please email us on <a href="mailto:keshav.katwe@gmail.com">keshav.katwe@gmail.com</a>
+                  </div>
+              </div>
+            
+              <div class="panel panel-default" id="overview">
+                  <div class="panel-body">
+                      <h3>Overview</h3>
+                      <hr/>
+                      <p>
+                          IgniTo is a fully responsive multipurpose template. It would be used in many kind of corporate business. It is stated with 14 different colours. Users can mount colours by themselves into their website. IgniTo interface is simple, presenting no difficulty for users. It is inclined with 15 pages which helps the users to use it on the go. It is also SEO friendly. FontAwesome plug-in is attached with the theme so that users can choose number of icons.
+                      </p>
+                      <p>
+                          We will be releasing more templates and plugins stay tuned with dynasofts.
+                      </p>
+                  </div>
+              </div>
+              
+              <div class="panel panel-default" id="template_structure">
+                  <div class="panel-body">
+                      <h3>Template Structure</h3>
+                      <hr/>
+                      <img style="width: 70%;border: 3px solid #1D7089;" src="assets/images/home.png">
+                      
+                      <br/><br/>
+                      <h4>Beginning of Page</h4>
+                      <p>Below code is used at the beginning of all HTML pages to detect Internet Explorer browser version and set a spesific class applied to Internet Explorer versions.</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;!--[if IE 8]&gt; &lt;html lang=&quot;en&quot; class=&quot;ie8&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 9]&gt; &lt;html lang=&quot;en&quot; class=&quot;ie9&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if !IE]&gt;&lt;!--&gt; &lt;html lang=&quot;en&quot;&gt; &lt;!--&lt;![endif]--&gt;
+</pre>  
+                      <br/>
+                      <h4>Page Head</h4>
+                      <p>Page head contains metadata and css files:</p>
+<pre class="prettyprint linenums lang-html">
+&#x3C;head&#x3E;
+&#x9;&#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
+&#x9;&#x3C;meta http-equiv=&#x22;X-UA-Compatible&#x22; content=&#x22;IE=edge&#x22;&#x3E;
+&#x9;&#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1&#x22;&#x3E;
+
+&#x9;&#x3C;!--Fav and touch icons--&#x3E;
+&#x9;&#x3C;link rel=&#x22;shortcut icon&#x22; href=&#x22;assets/images/favicon.ico&#x22; /&#x3E;
+&#x9;&#x3C;link rel=&#x22;apple-touch-icon&#x22; href=&#x22;img/icons/apple-touch-icon.png&#x22;&#x3E;
+&#x9;&#x3C;link rel=&#x22;apple-touch-icon&#x22; sizes=&#x22;72x72&#x22; href=&#x22;img/icons/apple-touch-icon-72x72.png&#x22;&#x3E;
+&#x9;&#x3C;link rel=&#x22;apple-touch-icon&#x22; sizes=&#x22;114x114&#x22; href=&#x22;img/icons/apple-touch-icon-114x114.png&#x22;&#x3E;
+
+&#x9;&#x3C;!-- Title of the page --&#x3E;
+&#x9;&#x3C;title&#x3E;IgniTo - Multipurpose fully responsive theme&#x3C;/title&#x3E;
+
+&#x9;&#x3C;!-- SEO tags --&#x3E;
+&#x9;&#x3C;meta name=&#x22;description&#x22; content=&#x22;Curtomer value&#x22;&#x3E;
+&#x9;&#x3C;meta name=&#x22;keyword&#x22; content=&#x22;Curtomer value&#x22;&#x3E;
+&#x9;&#x3C;link rel=&#x22;author&#x22; href=&#x22;Curtomer value&#x22;/&#x3E;
+&#x9;&#x3C;link rel=&#x22;publisher&#x22; href=&#x22;Curtomer value&#x22;/&#x3E;
+
+&#x9;&#x3C;!-- Social meta tags --&#x3E;
+&#x9;&#x3C;meta property=&#x22;og:title&#x22; content=&#x22;Curtomer value&#x22;&#x3E;
+&#x9;&#x3C;meta property=&#x22;og:type&#x22; content=&#x22;Curtomer value&#x22;&#x3E;
+&#x9;&#x3C;meta property=&#x22;og:image&#x22; content=&#x22;Curtomer value&#x22;&#x3E;
+&#x9;&#x3C;meta property=&#x22;og:url&#x22; content=&#x22;Curtomer value&#x22;&#x3E;
+&#x9;&#x3C;meta property=&#x22;og:description&#x22; content=&#x22;Curtomer value&#x22;&#x3E;
+&#x9;&#x3C;meta property=&#x22;fb:admins&#x22; content=&#x22;Curtomer value&#x22;&#x3E;
+
+&#x9;&#x3C;!-- Twitter Cards --&#x3E;
+&#x9;&#x3C;meta name=&#x22;twitter:card&#x22; content=&#x22;Curtomer value&#x22;&#x3E;
+&#x9;&#x3C;meta name=&#x22;twitter:url&#x22; content=&#x22;Curtomer value&#x22;&#x3E;
+&#x9;&#x3C;meta name=&#x22;twitter:title&#x22; content=&#x22;Curtomer value&#x22;&#x3E;
+&#x9;&#x3C;meta name=&#x22;twitter:description&#x22; content=&#x22;Curtomer value&#x22;&#x3E;
+&#x9;&#x3C;meta name=&#x22;twitter:image&#x22; content=&#x22;Curtomer value&#x22;&#x3E;
+
+&#x9;&#x3C;!-- BEGIN GLOBAL MANDATORY STYLES --&#x3E;
+&#x9;&#x3C;!-- Main template CSS --&#x3E;
+&#x9;&#x3C;link href=&#x22;assets/css/blue.css&#x22; rel=&#x22;stylesheet&#x22;&#x3E;
+
+&#x9;&#x3C;!-- Fontawesome CSS --&#x3E;
+&#x9;&#x3C;link href=&#x22;assets/plugins/font-awesome/css/font-awesome.min.css&#x22; rel=&#x22;stylesheet&#x22;&#x3E;
+
+&#x9;&#x3C;!-- Animate CSS --&#x3E;
+&#x9;&#x3C;link href=&#x22;assets/plugins/wow/animate.css&#x22; rel=&#x22;stylesheet&#x22;/&#x3E;
+
+&#x9;&#x3C;!-- scrollTop CSS --&#x3E;
+&#x9;&#x3C;link href=&#x22;assets/plugins/scrollTop/scrollTop.css&#x22; rel=&#x22;stylesheet&#x22;/&#x3E;
+&#x9;&#x3C;!-- END GLOBAL MANDATORY STYLES --&#x3E;
+&#x3C;/head&#x3E;
+</pre>
+                      <br/>
+                      <h4>Header</h4>
+                      <p>Header contains of logo and top menu bar and it used in all pages. HTML code of header container shown below:</p>
+<pre class="prettyprint linenums lang-html">
+&#x3C;!-- Navigation bar --&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-default&#x22; role=&#x22;navigation&#x22;&#x3E;
+    &#x3C;div class=&#x22;container&#x22;&#x3E;
+        &#x3C;!-- Brand and toggle get grouped for better mobile display --&#x3E;
+        &#x3C;div class=&#x22;navbar-header&#x22;&#x3E;
+            &#x3C;button type=&#x22;button&#x22; class=&#x22;navbar-toggle collapsed&#x22; data-toggle=&#x22;collapse&#x22; data-target=&#x22;#bs-example-navbar-collapse-1&#x22;&#x3E;
+                &#x3C;span class=&#x22;sr-only&#x22;&#x3E;Toggle navigation&#x3C;/span&#x3E;
+                &#x3C;span class=&#x22;icon-bar&#x22;&#x3E;&#x3C;/span&#x3E;
+                &#x3C;span class=&#x22;icon-bar&#x22;&#x3E;&#x3C;/span&#x3E;
+                &#x3C;span class=&#x22;icon-bar&#x22;&#x3E;&#x3C;/span&#x3E;
+            &#x3C;/button&#x3E;
+            &#x3C;a class=&#x22;navbar-brand wow fadeInLeft&#x22; href=&#x22;#&#x22;&#x3E;IgniTo&#x3C;/a&#x3E;
+        &#x3C;/div&#x3E;&#x3C;!-- End of brand --&#x3E;
+
+        &#x3C;!-- Collect the nav links, forms, and other content for toggling --&#x3E;
+        &#x3C;div class=&#x22;collapse navbar-collapse&#x22; id=&#x22;bs-example-navbar-collapse-1&#x22;&#x3E;
+            &#x3C;ul class=&#x22;nav navbar-nav navbar-right&#x22;&#x3E;
+                &#x3C;li class=&#x22;active&#x22;&#x3E;&#x3C;a href=&#x22;index.php&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                &#x3C;li class=&#x22;&#x22;&#x3E;&#x3C;a href=&#x22;about.php&#x22;&#x3E;About Us&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                &#x3C;li class=&#x22;&#x22;&#x3E;&#x3C;a href=&#x22;services.php&#x22;&#x3E;Services&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                &#x3C;li class=&#x22;&#x22;&#x3E;&#x3C;a href=&#x22;portfolio.php&#x22;&#x3E;Portfolio&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                &#x3C;li class=&#x22;dropdown&#x22;&#x3E;
+                    &#x3C;a href=&#x22;#&#x22; class=&#x22;dropdown-toggle&#x22; data-toggle=&#x22;dropdown&#x22;&#x3E;Pages &#x3C;i class=&#x22;fa fa-caret-down&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E;
+                    &#x3C;ul class=&#x22;dropdown-menu&#x22;&#x3E;
+                        &#x3C;li&#x3E;&#x3C;a href=&#x22;career.php&#x22;&#x3E;Career&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                        &#x3C;li&#x3E;&#x3C;a href=&#x22;blog-item.php&#x22;&#x3E;Blog Single&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                        &#x3C;li&#x3E;&#x3C;a href=&#x22;pricing.php&#x22;&#x3E;Pricing&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                        &#x3C;li&#x3E;&#x3C;a href=&#x22;404.php&#x22;&#x3E;404&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                        &#x3C;li&#x3E;&#x3C;a href=&#x22;registration.php&#x22;&#x3E;Registration&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                        &#x3C;li&#x3E;&#x3C;a href=&#x22;login.php&#x22;&#x3E;Login&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                        &#x3C;li class=&#x22;divider&#x22;&#x3E;&#x3C;/li&#x3E;
+                        &#x3C;li&#x3E;&#x3C;a href=&#x22;privacy.php&#x22;&#x3E;Privacy Policy&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                        &#x3C;li&#x3E;&#x3C;a href=&#x22;terms.php&#x22;&#x3E;Terms of Use&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                    &#x3C;/ul&#x3E;
+                &#x3C;/li&#x3E;
+                &#x3C;li class=&#x22;&#x22;&#x3E;&#x3C;a href=&#x22;blog.php&#x22;&#x3E;Blog&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                &#x3C;li class=&#x22;&#x22;&#x3E;&#x3C;a href=&#x22;contact.php&#x22;&#x3E;Contact&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+            &#x3C;/ul&#x3E;
+        &#x3C;/div&#x3E;&#x3C;!-- /.navbar-collapse --&#x3E;
+    &#x3C;/div&#x3E;&#x3C;!-- /.container-fluid --&#x3E;
+&#x3C;/nav&#x3E;&#x3C;!-- End of Navigation bar --&#x3E;
+</pre>     
+                      <br/>
+                      <h4>Content</h4>
+                      <p>Content consists of page title and page's main body. HTML code of Content container as shown below:</p>
+<pre class="prettyprint linenums">
+&#x3C;!-- Main content--&#x3E;  
+&#x3C;div class=&#x22;content&#x22;&#x3E;
+    &#x3C;!-- Page header --&#x3E;
+    &#x3C;div class=&#x22;dyna-header&#x22;&#x3E;
+        &#x3C;div class=&#x22;container&#x22;&#x3E;
+            &#x3C;h2 class=&#x22;wow fadeInRight&#x22;&#x3E;Blank page&#x3C;/h2&#x3E;
+            &#x3C;p&#x3E;Subtitle&#x3C;/p&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;&#x3C;!-- End of Page header --&#x3E;
+    &#x3C;!-- Body content --&#x3E;
+    &#x3C;div class=&#x22;container&#x22;&#x3E;
+        &#x3C;p&#x3E;Main body goes here&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;&#x3C;!-- End of body content --&#x3E;
+&#x3C;/div&#x3E;&#x3C;!-- End of main content--&#x3E; 
+</pre>  
+                      <br/>
+                      <h4>Footer</h4>
+<pre class="prettyprint linenums">
+&#x3C;!-- Footer --&#x3E;
+&#x3C;footer class=&#x22;footer&#x22;&#x3E;
+    &#x3C;div class=&#x22;container&#x22;&#x3E;
+        &#x3C;div class=&#x22;row&#x22;&#x3E;
+            &#x3C;!-- Contact --&#x3E;
+            &#x3C;div class=&#x22;col-md-3 col-sm-6 contact&#x22;&#x3E;
+                &#x3C;h3&#x3E;Contact&#x3C;/h3&#x3E;
+                &#x3C;hr/&#x3E;
+                &#x3C;ul class=&#x22;fa-ul&#x22;&#x3E;
+                    &#x3C;li&#x3E;&#x3C;i class=&#x22;fa fa-li fa-envelope&#x22;&#x3E;&#x3C;/i&#x3E; &#x3C;a&#x3E;keshav.katwe@gmail.com&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;&#x3C;i class=&#x22;fa fa-li fa-phone&#x22;&#x3E;&#x3C;/i&#x3E; +91-9538650838&#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;&#x3C;i class=&#x22;fa fa-li fa-map-marker&#x22;&#x3E;&#x3C;/i&#x3E; Alagundagi Oni,Hubli&#x3C;/li&#x3E;
+                &#x3C;/ul&#x3E;
+            &#x3C;/div&#x3E;&#x3C;!-- End of Contact --&#x3E;
+            &#x3C;!-- Quick links --&#x3E;  
+            &#x3C;div class=&#x22;col-md-3 col-sm-6 quicklinks&#x22;&#x3E;
+                &#x3C;h3&#x3E;Quick links&#x3C;/h3&#x3E;
+                &#x3C;hr/&#x3E;
+                &#x3C;ul class=&#x22;fa-ul&#x22;&#x3E;
+                    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home - Overview of all&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;About - Who we are&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Services - What services we provide&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Portfolio - Recent works&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                &#x3C;/ul&#x3E;
+            &#x3C;/div&#x3E;&#x3C;!-- End of Quick links --&#x3E;   
+            &#x3C;!-- Newsletter --&#x3E;    
+            &#x3C;div class=&#x22;col-md-3 col-sm-6 newsletter&#x22;&#x3E;
+                &#x3C;h3&#x3E;Newsletter&#x3C;/h3&#x3E;
+                &#x3C;hr/&#x3E;
+                &#x3C;div class=&#x22;input-group&#x22;&#x3E;
+                    &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; placeholder=&#x22;Enter email address&#x22;/&#x3E;
+                    &#x3C;span class=&#x22;input-group-btn&#x22;&#x3E;
+                            &#x3C;button class=&#x22;btn btn-default&#x22; type=&#x22;button&#x22;&#x3E;Go!&#x3C;/button&#x3E;
+                    &#x3C;/span&#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;&#x3C;!-- End of Newsletter --&#x3E; 
+            &#x3C;!-- Follow us --&#x3E;  
+            &#x3C;div class=&#x22;col-md-3 col-sm-6 follow-us&#x22;&#x3E;
+                &#x3C;h3&#x3E;Follow Us&#x3C;/h3&#x3E;
+                &#x3C;hr/&#x3E;
+                &#x3C;a href=&#x22;&#x22; class=&#x22;social-icon&#x22;&#x3E;&#x3C;i class=&#x22;fa fa-facebook&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E;
+                &#x3C;a href=&#x22;&#x22; class=&#x22;social-icon&#x22;&#x3E;&#x3C;i class=&#x22;fa fa-twitter&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E;
+                &#x3C;a href=&#x22;&#x22; class=&#x22;social-icon&#x22;&#x3E;&#x3C;i class=&#x22;fa fa-google-plus&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E;
+                &#x3C;br/&#x3E;&#x3C;br/&#x3E;
+            &#x3C;/div&#x3E;&#x3C;!-- End of Follow us --&#x3E;  
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!-- Bottom menu --&#x3E;
+    &#x3C;div class=&#x22;bottom-menu&#x22;&#x3E;
+        &#x3C;div class=&#x22;container&#x22;&#x3E;
+            &#x3C;p class=&#x22;copy-right&#x22;&#x3E;&#x26;COPY; 2014 Dynasofts. All Rights Reserved.&#x3C;/p&#x3E;
+            &#x3C;p class=&#x22;terms&#x22;&#x3E;Terms &#x26; condition | Privacy policy | FAQ&#x3C;/p&#x3E;
+        &#x3C;/div&#x3E;  
+    &#x3C;/div&#x3E;&#x3C;!-- End of bottom menu --&#x3E;
+&#x3C;/footer&#x3E;&#x3C;!-- End of Footer --&#x3E; 
+</pre>  
+                      <br/>
+                      <h4>End Of Page(Javascripts)</h4>
+                      <p>Javascript files loaded in the end of page. This will reduce page load time.</p>
+<pre class="prettyprint linenums">
+&#x3C;!-- BEGIN GLOBAL MANDATORY JS (Load javascripts at bottom, this will reduce page load time)--&#x3E;
+&#x3C;!-- jQuery (necessary for Bootstrap&#x27;s JavaScript plugins) --&#x3E;
+&#x3C;script type=&#x22;text/javascript&#x22; src=&#x22;assets/js/jquery.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+
+&#x3C;!-- Bootstrap core js --&#x3E;
+&#x3C;script type=&#x22;text/javascript&#x22; src=&#x22;assets/js/bootstrap.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+
+&#x3C;!-- Wow plugin Js --&#x3E;
+&#x3C;script type=&#x22;text/javascript&#x22; src=&#x22;assets/plugins/wow/wow.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+
+&#x3C;!-- niceScroll js --&#x3E;
+&#x3C;script type=&#x22;text/javascript&#x22; src=&#x22;assets/plugins/niceScroll/jquery.nicescroll.min.js&#x22;&#x3E;&#x3C;/script&#x3E;   
+
+&#x3C;!-- scrollTop js --&#x3E;
+&#x3C;script type=&#x22;text/javascript&#x22; src=&#x22;assets/plugins/scrollTop/scrollTop.js&#x22;&#x3E;&#x3C;/script&#x3E;   
+
+&#x3C;!-- App Js --&#x3E;
+&#x3C;script type=&#x22;text/javascript&#x22; src=&#x22;assets/scripts/app.js&#x22;&#x3E;&#x3C;/script&#x3E;   
+
+&#x3C;!-- Toolbox js (Not neccessary for live projects) js --&#x3E;
+&#x3C;script type=&#x22;text/javascript&#x22; src=&#x22;assets/plugins/toolbox/toolbox.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;!-- END GLOBAL MANDATORY JS --&#x3E;
+
+&#x3C;script&#x3E;
+    //Initialize app
+    app.init();
+&#x3C;/script&#x3E;
+</pre>
+                      <br/>
+                      <h4>HTML Code Comment Sample</h4>
+                      <p>All the html file contents have easy to refer and meaningful comments:</p>
+<pre class="prettyprint linenums">
+&#x3C;!-- Main content--&#x3E;  
+&#x3C;div class=&#x22;content&#x22;&#x3E;
+    &#x3C;!-- Page header --&#x3E;
+    &#x3C;div class=&#x22;dyna-header&#x22;&#x3E;
+        &#x3C;div class=&#x22;container&#x22;&#x3E;
+            &#x3C;h2 class=&#x22;wow fadeInRight&#x22;&#x3E;Blank page&#x3C;/h2&#x3E;
+            &#x3C;p&#x3E;Subtitle&#x3C;/p&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;&#x3C;!-- End of Page header --&#x3E;
+    &#x3C;!-- Body content --&#x3E;
+    &#x3C;div class=&#x22;container&#x22;&#x3E;
+        &#x3C;p&#x3E;Main body goes here&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;&#x3C;!-- End of body content --&#x3E;
+&#x3C;/div&#x3E;&#x3C;!-- End of main content--&#x3E;  
+</pre>
+                  </div>
+              </div>
+              
+              <div class="panel panel-default" id="fonts">
+                  <div class="panel-body">
+                      <h3>Fonts</h3>
+                      <hr/>
+                      <p>IgniTo uses Pacifico and Dosis fonts from google fonts. The font is loaded in CSS:</p>
+<pre class="prettyprint linenums">
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Dosis);                            
+</pre>
+                  </div>
+              </div>
+              
+              <div class="panel panel-default" id="theme">
+                  <div class="panel-body">
+                      <h3>Theme & Layout Configuration</h3>
+                      <hr/>
+                      <h4>Theme Setup</h4>
+                      <p>IgniTo comes with 14 color themes <code>blue</code>, <code>brown</code>, <code>navyblue</code>, <code>darkpink</code>, <code>orange</code>, <code>purple</code>, <code>royalblue</code>, <code>marun</code>, <code>red</code>, <code>green</code>, <code>lightgreen</code>, <code>darkcyan</code>, <code>lightorange</code>, <code>pink</code>. To setup a selected theme. Include <code>assets/css/[theme_name].css</code> in page head. For instance, if you like to use blue theme, include <code>assets/css/blue.css</code> css file. CSS file load order should be followed as shown below:</p>
+<pre class="prettyprint linenums">
+&#x3C;link id=&#x22;theme-color&#x22; href=&#x22;assets/css/blue.css&#x22; rel=&#x22;stylesheet&#x22;&#x3E;
+</pre>
+                      <br/>
+                      <h4>Layout Settings</h4>
+                      <p>The best way to learn how to use IngiTo's available layout options, please go to one of Ignito pages and use the "Theme Settings" panel located at the middle left of the page. Choose you preferred layout options, and use <code>Chrome's Developer Tool</code> and <code>Firefox's Firebug Tool</code> to see the HTML code changes upon you select your layout combination. When you change the laypout option, mostly some css classes will be added into the page's body element. When you change the layout settings only the most parent HTML elements will be modified, the page content part remains as it is.</p>
+                      <br/>
+                      <h4>Fixed Header & Footer</h4>
+                      <p>For fixed header you will need to apply <code>navbar-fixed-top</code> for <code>nav</code> as shown below:</p>
+<pre class="prettyprint linenums">
+&#x3C;nav class=&#x22;navbar navbar-default navbar-fixed-top&#x22; role=&#x22;navigation&#x22;&#x3E;&#x3C;/nav&#x3E;
+</pre>                      
+                  </div>
+              </div>
+              
+              <div class="panel panel-default" id="top-menu">
+                  <div class="panel-body">
+                      <h3>Top Menu</h3>
+                      <hr/>
+                      <p>Top menu enables an easy access to most frequently accessed information and pages.</p>
+                      <img src="assets/images/top-menu.png" style="width: 600px;border: 3px solid #1D7089"/>
+                      <br/><br/>
+<pre class="prettyprint linenums">
+&#x3C;ul class=&#x22;nav navbar-nav navbar-right&#x22;&#x3E;
+    &#x3C;li class=&#x22;&#x22;&#x3E;&#x3C;a href=&#x22;index.php&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;active&#x22;&#x3E;&#x3C;a href=&#x22;about.php&#x22;&#x3E;About Us&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;&#x22;&#x3E;&#x3C;a href=&#x22;services.php&#x22;&#x3E;Services&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;&#x22;&#x3E;&#x3C;a href=&#x22;portfolio.php&#x22;&#x3E;Portfolio&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;dropdown&#x22;&#x3E;
+        &#x3C;a href=&#x22;#&#x22; class=&#x22;dropdown-toggle&#x22; data-toggle=&#x22;dropdown&#x22;&#x3E;Pages &#x3C;i class=&#x22;fa fa-caret-down&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E;
+        &#x3C;ul class=&#x22;dropdown-menu&#x22;&#x3E;
+            &#x3C;li&#x3E;&#x3C;a href=&#x22;career.php&#x22;&#x3E;Career&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li&#x3E;&#x3C;a href=&#x22;blog-item.php&#x22;&#x3E;Blog Single&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li&#x3E;&#x3C;a href=&#x22;pricing.php&#x22;&#x3E;Pricing&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li&#x3E;&#x3C;a href=&#x22;404.php&#x22;&#x3E;404&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li&#x3E;&#x3C;a href=&#x22;registration.php&#x22;&#x3E;Registration&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li&#x3E;&#x3C;a href=&#x22;login.php&#x22;&#x3E;Login&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li class=&#x22;divider&#x22;&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li&#x3E;&#x3C;a href=&#x22;privacy.php&#x22;&#x3E;Privacy Policy&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li&#x3E;&#x3C;a href=&#x22;terms.php&#x22;&#x3E;Terms of Use&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;/ul&#x3E;
+    &#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;&#x22;&#x3E;&#x3C;a href=&#x22;blog.php&#x22;&#x3E;Blog&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;&#x22;&#x3E;&#x3C;a href=&#x22;contact.php&#x22;&#x3E;Contact&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;                          
+</pre>
+                  </div>
+              </div>
+              <div class="panel panel-default" id="new-page">
+                  <div class="panel-body">
+                      <h3>New Page</h3>
+                      <hr/>
+                      <p>To create a new page, you can use <code>blank.html</code> which provides basic page layout which you can extend and modify further.</p>
+                  </div>
+              </div>
+              
+              <div class="panel panel-default" id="javascriptInitialization">
+                  <div class="panel-body">
+                      <h3>Javascript Initialization</h3>
+                      <hr/>
+                      <p>Core javascript initialization implemented in assets/scripts/app.js thorugh App object as shown below. This approach enables an easy modular implementation to initialize jquery plugins and other application logics.</p>
+<pre class="prettyprint linenums">
+var App = function () {
+ 
+    var localVariable; //local variable
+ 
+    var sampleFunction = function() {
+       //sample function code
+    }
+ 
+    return {
+ 
+        //main method to initiate template pages
+        init: function () {           
+            sampleFunction() // call local function
+        },
+ 
+        //sample method declaration
+        sampleMethod: function (test) 
+        {
+          alert(test);
+      }
+ 
+    };
+ 
+}();                            
+</pre>
+                      <h4>Core Handler Functions defined in <code>assets/scripts/app.js</code></h4>
+                      <p>Below will be listed all handler functons implemented in App object:</p>
+                  </div>
+              </div>
+              
+              
+              <div class="panel panel-default" id="javascriptPluginsResources">
+                  <div class="panel-body">
+                        <h3>Javascript Plugins & Resources</h3>
+                        <hr/>
+                        <h4>Select Plugin Or Resource:</h4>
+                        <div class="row">
+                          <div class="col-md-3">
+                              <select class="form-control" onchange="change_plugin(this.value)">
+                                <option value="font_awesome">Font Awesome</option>
+                                <option value="wow">Wow.js</option>
+                                <option value="slimscroll">jQuery slimScroll</option>
+                            </select>
+                          </div>
+                        </div>
+                        <br/>
+                        <div class="plugins font_awesome">
+                            <h4>Font Awesome 4.2.0</h4>
+                            <p>The iconic font designed for use with Twitter Bootstrap</p>
+                            <h4>CSS File</h4>
+<pre class="prettyprint linenums">
+&#x3C;link href=&#x22;assets/plugins/font-awesome/css/font-awesome.min.css&#x22; rel=&#x22;stylesheet&#x22;&#x3E;
+</pre>
+                            <h4>Official Documentation</h4>
+                            <a href="http://fortawesome.github.io/Font-Awesome/" target="new">http://fortawesome.github.io/Font-Awesome/</a>
+                        </div>
+                        
+                        <div class="plugins wow">
+                            <h4>WOW.js</h4>
+                            <p>Reveal CSS animation as you scroll down a page. By default, you can use it to trigger animate.css animations. But you can easily change the settings to your favorite animation library.</p>
+                            <h4>CSS File</h4>
+<pre class="prettyprint linenums">
+&#x3C;link href=&#x22;assets/plugins/wow/animate.css&#x22; rel=&#x22;stylesheet&#x22;/&#x3E;
+</pre>
+                            <h4>Js File</h4>
+<pre class="prettyprint linenums">
+&#x3C;script type=&#x22;text/javascript&#x22; src=&#x22;assets/plugins/wow/wow.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+</pre>
+                            <h4>Official Documentation</h4>
+                            <a href="https://github.com/matthieua/WOW" target="new">https://github.com/matthieua/WOW</a>
+                        </div>
+                      
+                        <div class="plugins slimscroll">
+                            <h4>jQuery slimScroll</h4>
+                            <p>slimScroll is a small (4.6KB) jQuery plugin that transforms any div into a scrollable area with a nice scrollbar - similar to the one Facebook and Google started using in their products recently. slimScroll doesn't occupy any visual space as it only appears on a user initiated mouse-over. User can drag the scrollbar or use mouse-wheel to change the scroll value.</p>
+                            
+                            <h4>Js File</h4>
+<pre class="prettyprint linenums">
+&#x3C;script type=&#x22;text/javascript&#x22; src=&#x22;assets/plugins/scrollTop/scrollTop.js&#x22;&#x3E;&#x3C;/script&#x3E; 
+</pre>
+                            <h4>Official Documentation</h4>
+                            <a href="http://rocha.la/jQuery-slimScroll" target="new">http://rocha.la/jQuery-slimScroll</a>
+                        </div>
+                  </div>
+              </div>
+              
+              <div class="panel panel-default" id="references">
+                  <div class="panel-body">
+                      <h3>References</h3>
+                      <hr/>
+                      <p>Below is the list of all plugins and external resources used to power this template.</p>
+                      <table class="table table-hover">
+                          <thead>
+                              <tr>
+                                  <th>Name</th>
+                                  <th>Description</th>
+                                  <th>URL</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td width="30%">jQuery v1.11.1</td>
+                                  <td width="40%">Core Javascript library</td>
+                                  <td width="30%"><a href="http://www.jquery.com" target="new">http://www.jquery.com</a></td>
+                              </tr>
+                              <tr>
+                                  <td>Bootstrap v3.3.1</td>
+                                  <td>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</td>
+                                  <td><a href="http://getbootstrap.com/" target="new">http://getbootstrap.com/</a></td>
+                              </tr>
+                              <tr>
+                                  <td>WOW.js</td>
+                                  <td>Reveal CSS animation as you scroll down a page. By default, you can use it to trigger animate.css animations. But you can easily change the settings to your favorite animation library.</td>
+                                  <td><a href="https://github.com/matthieua/WOW" target="new">https://github.com/matthieua/WOW</a></td>
+                              </tr>
+                              <tr>
+                                  <td>jQuery slimScroll</td>
+                                  <td>slimScroll is a small (4.6KB) jQuery plugin that transforms any div into a scrollable area with a nice scrollbar - similar to the one Facebook and Google started using in their products recently. slimScroll doesn't occupy any visual space as it only appears on a user initiated mouse-over. User can drag the scrollbar or use mouse-wheel to change the scroll value.</td>
+                                  <td><a href="http://rocha.la/jQuery-slimScroll" target="new">http://rocha.la/jQuery-slimScroll</a></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+              
+              <div class="panel panel-default" id="end">
+                  <div class="panel-body">
+                      <h3>End Of Documentation</h3>
+                      <hr/>
+                      <p>Once again, thanks for purchasing IgniTo. We hope you will enjoy using it for your next project.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <br/>
+      <div class="clearfix"></div>
+      <div style="background: rgb(244, 244, 244);height: 50px;text-align: center;line-height: 50px;">
+          IgniTo - Fully responsive multipurpose template. Designed and built with love by dynasofts
+      </div>
+      
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#myNav").affix({
+            offset: { 
+                top: 0 
+            }
+        });
+        $("#myNav").on('affixed.bs.affix', function(){
+            $(this).addClass("col-md-3 row");
+        });
+    });
+    
+    
+    </script>
+    <script type="text/javascript">
+
+    (function(jQuery){
+
+      jQuery( document ).ready( function() {
+
+        prettyPrint();
+
+      } );
+
+    }(jQuery))
+    
+    jQuery( document ).ready( function() {
+        $('.plugins').hide();
+        $('.font_awesome').show();
+    });
+    function change_plugin(plugin)
+    {
+        $('.plugins').hide();
+        $('.'+plugin).show();
+    }
+    
+    
+
+    </script>
+  </body>
+</html>

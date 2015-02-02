@@ -1,0 +1,110 @@
+
+.activetool
+{
+    margin-left:0px!important;
+}
+
+.toolbox
+{
+    width: 300px;
+    position: fixed;
+    background: #fff;
+    top: 35%;
+    z-index: 100;
+    box-shadow: 0px 0px 2px 1px rgb(206, 206, 206);
+    padding: 20px;
+    margin-left: -302px;
+    -webkit-transition: all .35s linear 0s; /* For Safari 3.1 to 6.0 */
+    transition: all .35s linear 0s;
+    cursor: pointer;
+}
+
+.toolbox .tool
+{
+    margin-left: 280px;
+    position: absolute;
+    top: 0px;
+    height: 50px;
+    width: 50px;
+    background: lightgrey;
+    text-align: center;
+    box-shadow: 1px 0px 1px 0px rgb(206, 206, 206);
+    border-radius: 0px 10px 10px 0px;
+    color: #4D4D4D;
+}
+
+.toolbox .tool:hover
+{
+    color: #000;
+}
+
+.eachcolor
+{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.color-1
+{
+    background: #34B1C4;
+}
+
+.color-2
+{
+    background: #c63d0f;
+}
+.color-3
+{
+    background: #2d3e50;
+}
+.color-4
+{
+    background: #d02552;
+}
+.color-5
+{
+    background: #e84d1c;
+}
+.color-6
+{
+    background: #763A7A;
+}
+.color-7
+{
+    background: #0288AD;
+}
+.color-8
+{
+    background: #AC2832;
+}
+.color-9
+{
+    background: #DE1B1B;
+}
+.color-10
+{
+    background: #005A31;
+}
+.color-11
+{
+    background: #A8CD1B;
+}
+.color-12
+{
+    background: #558C89;
+}
+.color-13
+{
+    background: #FF9009;
+}
+.color-14
+{
+    background: #DF3D82;
+}
+.color-active
+{
+    border: 3px solid rgb(218, 218, 218);
+}
